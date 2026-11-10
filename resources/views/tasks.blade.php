@@ -1,0 +1,3 @@
+@extends('layouts.app')
+@section('title', 'Task List')
+@section('content')<div class="eyebrow">THE BIGGER PICTURE</div><div class="page-heading compact"><div><h1>Every task.<br><em>All in one place.</em></h1><p>Your complete task list, from the earliest date to the latest.</p></div><span class="pill">{{ $tasks->count() }} total tasks</span></div><section class="panel"><div class="panel-heading"><div><h2>Task List</h2><p>All dates · Ordered by scheduled date</p></div><a class="button secondary" href="{{ route('welcome') }}">Today’s focus ↗</a></div>@include('partials.task-table')</section>@endsection
